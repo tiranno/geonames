@@ -26,7 +26,7 @@ DOCKER_TAG_IMAGE_NAME="${DOCKER_PROJECT}:${DOCKER_TAG_IMAGE_VERSION}"
 
 # build image and login to docker hub
 docker build -t $DOCKER_PROJECT .
-docker login -u="$DOCKER_USERNAME" -p='$DOCKER_PASSWORD'
+docker login -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD"
 
 # copy the image to each of the two tags, and push
 docker tag $DOCKER_PROJECT $DOCKER_BRANCH_IMAGE_NAME
